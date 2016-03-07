@@ -27,12 +27,4 @@ function fitRect(rect, target, mode) {
     ]
 }
 
-var rect = [0, 0, 16, 9];
-var target = [200, 200, 400, 400];
-var contained = fitRect(rect, target, 'contain');
-var covered = fitRect(rect, target, 'cover');
-
-console.log(contained)
-console.log(covered)
-
 module.exports = fitRect;
