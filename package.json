@@ -1,6 +1,6 @@
 {
   "name": "fit-rect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fits one rectangle into another",
   "main": "index.js",
   "license": "MIT",
