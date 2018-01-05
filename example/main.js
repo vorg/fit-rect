@@ -32,14 +32,14 @@ Window.create({
         ctx.fillStyle = '#DDDDDD';
         ctx.fillRect(target[0], target[1], target[2], target[3])
 
-        var contained = fitRect(rect, target);
+        var containedRect = fitRect(rect, target);
 
         ctx.strokeStyle = '#FF0000';
-        ctx.strokeRect(contained[0], contained[1], contained[2], contained[3])
+        ctx.strokeRect(containedRect[0], containedRect[1], containedRect[2], containedRect[3])
 
-        var covered = fitRect(rect, target, 'cover');
+        var coveringRect = fitRect(rect, target, 'cover');
 
         ctx.strokeStyle = '#00DDAA';
-        ctx.strokeRect(covered[0], covered[1], covered[2], covered[3])
+        ctx.strokeRect(coveringRect[0], coveringRect[1], coveringRect[2], coveringRect[3])
     }
 })

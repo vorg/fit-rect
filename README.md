@@ -24,8 +24,8 @@ var fitRect = require('fit-rect');
 
 var rect = [0, 0, 16, 9];
 var target = [200, 200, 400, 400];
-var contained = fitRect(rect, target, 'contain'); //[ 200, 287.5, 400, 225 ]
-var covered = fitRect(rect, target, 'cover');     //[ 44.4, 200, 711.1, 400 ]
+var containedRect = fitRect(rect, target, 'contain'); //[ 200, 287.5, 400, 225 ]
+var coveringRect = fitRect(rect, target, 'cover');     //[ 44.4, 200, 711.1, 400 ]
 ```
 
 ## License
