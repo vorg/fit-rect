@@ -10,22 +10,27 @@ Fits one rectangle into another
 
 [![NPM](https://nodei.co/npm/fit-rect.png)](https://www.npmjs.com/package/fit-rect)
 
-#### fitRect(rect, target, mode)
+```typescript
+fitRect(rect: Size, target: Rect, mode: FitMode): Rect
+```
 
-Parameters:  
-`rect` - array [x,y,w,h]  
-`target` - array [x,y,w,h]  
-`mode`  - string 'contain' (default) or 'cover'
+##### Parameters:
 
-Returns rectangle `[x,y,w,h]`
+- `rect` - array [ w, h ] or [ x, y, w, h ]
+- `target` - array [ w, h ] or [ x, y, w, h ]
+- `mode` - string 'contain' (default) or 'cover'
 
-```javascript
-var fitRect = require('fit-rect');
+##### Returns:
 
-var rect = [0, 0, 16, 9];
-var target = [200, 200, 400, 400];
-var containedRect = fitRect(rect, target, 'contain'); //[ 200, 287.5, 400, 225 ]
-var coveringRect = fitRect(rect, target, 'cover');     //[ 44.4, 200, 711.1, 400 ]
+- array [ x, y, w, h ]
+
+```typescript
+import { fitRect } from "fit-rect";
+
+const rect = [16, 9];
+const target = [200, 200, 400, 400];
+const containedRect = fitRect(rect, target, "contain"); //[ 200, 287.5, 400, 225 ]
+const coveringRect = fitRect(rect, target, "cover"); //[ 44.4, 200, 711.1, 400 ]
 ```
 
 ## License
